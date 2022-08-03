@@ -1,0 +1,53 @@
+import React, { render, Component } from './react';
+
+const root = document.getElementById('root');
+
+const jsx = (
+  <div>
+    <p>hello react</p>
+    <p>hello fiber</p>
+  </div>
+);
+
+// render(jsx, root);
+
+// setTimeout(() => {
+//   render(
+//     <div>
+//       <div>oligay</div>
+//       {/* <p>hello fiber</p> */}
+//     </div>,
+//     root,
+//   );
+// }, 2000);
+
+class Greating extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '张三',
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        {this.props.title} hahaha {this.state.name}
+        <button
+          onClick={() => {
+            this.setState({ name: '李四' });
+          }}>
+          button
+        </button>
+      </div>
+    );
+  }
+}
+
+render(<Greating title={'oligay'}></Greating>, root);
+
+function FnComponent(props) {
+  return <div>{props.title} FnComponent</div>;
+}
+
+// render(<FnComponent title='hello'></FnComponent>, root);
