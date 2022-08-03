@@ -1,5 +1,10 @@
 import updateNodeElement from './updateNodeElement'
 
+/**
+ * 为fiber创建真实dom
+ * @param {*} virtualDom 
+ * @returns 
+ */
 export default function createDomElement(virtualDom) {
   let newElement = null;
   
@@ -8,7 +13,6 @@ export default function createDomElement(virtualDom) {
     // 文本节点
     // 文本节点不需要添加属性
     newElement = document.createTextNode(virtualDom.props.textContent);
-    console.log('newElement', newElement);
   } else {
     // 元素节点
     newElement = document.createElement(virtualDom.type);

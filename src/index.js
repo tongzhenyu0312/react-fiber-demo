@@ -9,7 +9,7 @@ const jsx = (
   </div>
 );
 
-// render(jsx, root);
+render(jsx, root);
 
 // setTimeout(() => {
 //   render(
@@ -21,33 +21,33 @@ const jsx = (
 //   );
 // }, 2000);
 
-class Greating extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '张三',
-    };
-  }
+// class Greating extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       name: '张三',
+//     };
+//   }
 
-  render() {
-    return (
-      <div>
-        {this.props.title} hahaha {this.state.name}
-        <button
-          onClick={() => {
-            this.setState({ name: '李四' });
-          }}>
-          button
-        </button>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         {this.props.title} hahaha {this.state.name}
+//         <button
+//           onClick={() => {
+//             this.setState({ name: '李四' });
+//           }}>
+//           button
+//         </button>
+//       </div>
+//     );
+//   }
+// }
 
-render(<Greating title={'oligay'}></Greating>, root);
+// render(<Greating title={'oligay'}></Greating>, root);
 
-function FnComponent(props) {
-  return <div>{props.title} FnComponent</div>;
-}
+// function FnComponent(props) {
+//   return <div>{props.title} FnComponent</div>;
+// }
 
 // render(<FnComponent title='hello'></FnComponent>, root);
